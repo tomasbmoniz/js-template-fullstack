@@ -9,6 +9,9 @@ const express = require("express");
 
 const app = express();
 
+// Serve the public folder for public resources
+app.use(express.static(path.join(__dirname, "../public")));
+
 // use some application-level middlewares
 
 app.use(express.json());
